@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/entry_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="My day was good"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/entry_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A great day to begin with adsbah dabdb ahb hj hjasvhf vaj b dab "
+        android:maxLines="1"
+        android:textSize="20dp"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="12/02/2016" />
+</LinearLayout>
