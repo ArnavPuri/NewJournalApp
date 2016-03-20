@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     private static final String CREATE_TABLE = "create table " +
             Constants.TABLE_NAME + " (" +
-            Constants.KEY_ID + " integer primary autoincrement, " +
+            Constants.KEY_ID + " integer primary key autoincrement, " +
             Constants.TITLE_NAME + " text not null, " +
             Constants.HIGHLIGHT_NAME + " text not null, " +
             Constants.CONTENT_NAME + " text not null, " +

@@ -36,5 +36,8 @@ public class MyDB {
         return db.insert(Constants.TABLE_NAME,null,contentValues);
     }
 
-   
+   public Cursor getEntries(){
+       return dbHelper.getReadableDatabase().query(Constants.TABLE_NAME, null,null,null,null,null,null);
+   }
+
 }
