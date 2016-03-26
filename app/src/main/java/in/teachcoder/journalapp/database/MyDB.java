@@ -36,6 +36,15 @@ public class MyDB {
         return db.insert(Constants.TABLE_NAME,null,contentValues);
     }
 
+    public long updateEntry(String title, String highlight, String content, String date, int id){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Constants.TITLE_NAME, title);
+        contentValues.put(Constants.HIGHLIGHT_NAME, highlight);
+        contentValues.put(Constants.CONTENT_NAME, content);
+        contentValues.put(Constants.DATE_NAME, date);
+        return db.update(Constants.TABLE_NAME,contentValues,Constants.KEY_ID + "=" + id, null);
+    }
+
    public Cursor getEntries(){
        return dbHelper.getReadableDatabase().query(Constants.TABLE_NAME, null,null,null,null,null,null);
    }
