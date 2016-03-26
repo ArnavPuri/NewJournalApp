@@ -17,7 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
             Constants.TITLE_NAME + " text not null, " +
             Constants.HIGHLIGHT_NAME + " text not null, " +
             Constants.CONTENT_NAME + " text not null, " +
-            Constants.DATE_NAME + " long not null) ";
+            Constants.DATE_NAME + " text not null) ";
 
     public DBHelper(Context context) {
         super(context, Constants.DATABASE_NAME, null, Constants.DATABASE_VERSION);

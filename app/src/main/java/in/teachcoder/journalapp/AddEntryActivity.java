@@ -3,10 +3,15 @@ package in.teachcoder.journalapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import in.teachcoder.journalapp.database.MyDB;
 
@@ -24,6 +29,7 @@ public class AddEntryActivity extends AppCompatActivity {
         content = (EditText) findViewById(R.id.add_entry_content);
         submitButton = (Button) findViewById(R.id.add_entry_button);
         myDB = new MyDB(AddEntryActivity.this);
+
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,8 +44,13 @@ public class AddEntryActivity extends AppCompatActivity {
         String entryHighlight = highlight.getText().toString();
         String entryContent = content.getText().toString();
         long entryDate = System.currentTimeMillis();
-        myDB.insertEntry(entryTitle,entryHighlight,entryContent,entryDate);
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+        Date date = new Date();
+        myDB.insertEntry(entryTitle,entryHighlight,entryContent,dateFormat.format(date));
         myDB.close();
+
+
         title.setText("");
         content.setText("");
         highlight.setText("");

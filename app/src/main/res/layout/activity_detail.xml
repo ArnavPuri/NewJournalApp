@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="in.teachcoder.journalapp.DetailActivity">
+<TextView
+    android:id="@+id/detail_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="28sp"
+    android:gravity="center"
+    android:text="A day to remember"/>
+
+    <TextView
+        android:layout_below="@id/detail_title"
+        android:layout_marginTop="8dp"
+        android:id="@+id/detail_date"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2/03/2016"/>
+    <TextView
+        android:id="@+id/detail_highlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_margin="12dp"
+        android:layout_below="@id/detail_date"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="A day to remember highlight"/>
+    <TextView
+        android:id="@+id/detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@id/detail_highlight"
+        android:text="A day to remember details"/>
+
+</RelativeLayout>

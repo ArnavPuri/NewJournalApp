@@ -27,7 +27,7 @@ public class MyDB {
         db.close();
     }
 
-    public long insertEntry(String title, String highlight, String content, Long date){
+    public long insertEntry(String title, String highlight, String content, String date){
         ContentValues contentValues = new ContentValues();
         contentValues.put(Constants.TITLE_NAME, title);
         contentValues.put(Constants.HIGHLIGHT_NAME, highlight);
